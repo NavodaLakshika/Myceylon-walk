@@ -1,7 +1,12 @@
 <!-- Plan My Trip / Custom Tour Modal -->
 <div class="modal-overlay" id="planTripModal" role="dialog" aria-modal="true" aria-labelledby="modalHeading">
   <div class="modal-card">
-    <!-- <button type="button" class="modal-close-btn" id="modalCloseBtn" aria-label="Close dialog">&times;</button> -->
+    <button type="button" class="modal-close-btn" id="modalCloseBtn" aria-label="Close dialog">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
     <h3 class="modal-title" id="modalHeading">Plan Your Sri Lanka Journey</h3>
     <p class="modal-subtitle">Tell us your dream holiday ideas and our local travel specialists will craft a bespoke itinerary.</p>
 
