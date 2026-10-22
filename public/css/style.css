@@ -46,6 +46,20 @@
   --font-serif: 'Playfair Display', Georgia, serif;
   --font-display: 'Cinzel', serif;
   --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+
+  /* Page scale; vh-based heights divide by this so they still fill the screen */
+  --page-zoom: 1;
+}
+
+/* Small laptop displays: the desktop layout reads oversized at 100%,
+   so render it as if the browser were zoomed to 80% */
+@media (min-width: 1025px) and (max-width: 1600px) {
+  :root {
+    --page-zoom: 0.8;
+  }
+  html {
+    zoom: 0.8;
+  }
 }
 
 /* ==========================================================================
@@ -451,7 +465,7 @@ button {
   right: -100%;
   width: 80%;
   max-width: 360px;
-  height: 100vh;
+  height: calc(100vh / var(--page-zoom));
   background: var(--brand-forest-black);
   z-index: 999;
   padding: 100px 32px 40px;
@@ -596,7 +610,7 @@ button {
    ========================================================================== */
 .hero-section {
   position: relative;
-  min-height: 100vh;
+  min-height: calc(100vh / var(--page-zoom));
   display: flex;
   flex-direction: column;
   align-items: stretch;
