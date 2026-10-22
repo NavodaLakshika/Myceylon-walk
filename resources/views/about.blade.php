@@ -39,7 +39,7 @@
       <div class="split-story-content">
         <h2 class="section-title reveal-text">
           A local team.<br>
-          <span style="color: var(--primary-gold); font-style: italic;">A deeper purpose.</span>
+          <span style="color: var(--primary-gold); ">A deeper purpose.</span>
         </h2>
         <p class="reveal-text delay-100" style="margin: 20px 0 28px; color: var(--text-muted); font-size: 1.05rem; line-height: 1.7;">
           We are a team of local travel experts, nature lovers and storytellers, dedicated to creating meaningful travel experiences that support local communities and protect the natural beauty of Sri Lanka.
