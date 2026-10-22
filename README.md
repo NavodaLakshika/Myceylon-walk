@@ -1,165 +1,91 @@
-# 🌴 My Ceylon Walk — Luxury Sri Lanka Travel & Tour Booking Platform
+# My Ceylon Walk
 
-[![Laravel](https://img.shields.io/badge/Laravel-12.x-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)](https://laravel.com)
-[![PHP](https://img.shields.io/badge/PHP-8.4-777BB4?style=for-the-badge&logo=php&logoColor=white)](https://php.net)
-[![CSS3](https://img.shields.io/badge/Custom_CSS3-No_Frameworks-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
-[![JavaScript](https://img.shields.io/badge/Vanilla_JS-ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+A multi-page travel website for authentic journeys in Sri Lanka, covering curated tours, boutique stays and local experiences.
 
-A bespoke, luxury multi-page travel platform dedicated to authentic Sri Lankan journeys, luxury boutique stays, and curated wildlife and cultural experiences. Built with pure semantic HTML5, custom CSS3 design tokens, vanilla JavaScript scroll animations, and standard Laravel 12 MVC Blade architecture.
+Built with Laravel and Blade templates, a custom CSS design system and vanilla JavaScript. No front-end frameworks are used.
 
----
+## Pages
 
-## ✨ Features & Highlights
+| Route          | Page        | Description                                                 |
+| -------------- | ----------- | ----------------------------------------------------------- |
+| `/`            | Home        | Hero, featured journeys, destinations and call to action    |
+| `/tours`       | Tours       | Tour search, packages and itineraries                       |
+| `/stays`       | Stays       | Accommodation search, featured stays and locations          |
+| `/experiences` | Experiences | Experience categories, featured activities and seasonal highlights |
+| `/about`       | About       | Company story, values, planning process and testimonials    |
 
-- **Multi-Page Architecture (Not a SPA):**
-  - **Home & Destinations (`/`):** Panoramic hero, featured journeys, 4-column destination highlights (Sigiriya, Ella, Yala, Mirissa), why travel with us, and CTA banners.
-  - **Tours (`/tours`):** Curated tour packages, search bar (where to, duration, budget, travel style), category filter pills, horizontal detailed itinerary cards, and expandable itinerary modal.
-  - **Stays (`/stays`):** Luxury eco lodges, beachfront villas, boutique hill country retreats, booking search widget, and location browse grid.
-  - **Experiences (`/experiences`):** 6-grid authentic activities (safari, tea tasting, traditional cooking, whale watching, wellness retreats, surfing) and seasonal Sri Lankan highlights.
-  - **About Us (`/about`):** Company vision, meet the local guide team, value pillars, and 4-step journey planning process.
-- **Scroll-Triggered Micro-Animations:**
-  - Modern `IntersectionObserver` text-reveal and card-reveal effects with blur-to-sharp transitions and staggered delays (`.reveal-text`, `.reveal-card`, `.reveal-lines`).
-- **Official Brand Logo:**
-  - Integrated custom brand identity with Sri Lankan map emblem, sunset, palm trees, and ocean motif presented in an elegant badge with gold accents.
-- **High-Resolution Imagery:**
-  - 46 authentic, high-definition WebP images covering Sri Lankan landscapes, heritage trains, misty tea hills, leopards, elephants, and ocean coasts.
-- **Interactive Features:**
-  - Sticky glassmorphism header on scroll.
-  - Category filter pills for tours and stays with instant active state toggling.
-  - Bespoke "Plan My Trip" modal with AJAX validation and backdrop click-to-close.
-  - Save to favorites toggleable heart badges on journey cards.
+A `POST /plan-trip` endpoint handles submissions from the "Plan My Trip" form.
 
----
+## Features
 
-## 📁 Project Structure
+- Responsive layout for desktop, tablet and mobile
+- Scroll-triggered reveal animations using `IntersectionObserver`
+- Sticky header that turns solid on scroll, with a mobile navigation drawer
+- Category filters for experiences and stays
+- "Plan My Trip" modal form
+- Optimised WebP imagery
 
-```text
-d:\Chathumina\traval/
-├── app/
-│   └── Http/
-│       └── Controllers/
-│           └── TravelController.php      # Handles all page views & trip planning API
-├── bootstrap/
-│   ├── app.php                          # Application configuration & middleware
-│   └── providers.php
-├── config/                              # Laravel configuration files
-├── database/                            # Migrations & database setup
-├── public/
-│   ├── css/
-│   │   └── style.css                    # Custom CSS3 luxury design system
-│   ├── js/
-│   │   └── main.js                      # Vanilla JS (IntersectionObserver, filters, modal)
-│   ├── images/
-│   │   ├── logo.png                     # Official My Ceylon Walk logo
-│   │   ├── logo-transparent.png         # Transparent variant for dark backgrounds
-│   │   └── *.webp                       # 46 authentic high-resolution travel photos
-│   ├── index.php                        # Laravel HTTP front controller
-│   ├── index.html                       # Standalone static preview (Home)
-│   ├── tours.html                       # Standalone static preview (Tours)
-│   ├── stays.html                       # Standalone static preview (Stays)
-│   ├── experiences.html                 # Standalone static preview (Experiences)
-│   └── about.html                       # Standalone static preview (About)
-├── resources/
-│   └── views/
-│       ├── layouts/
-│       │   └── app.blade.php            # Master layout with Google Fonts, Meta & Scripts
-│       ├── partials/
-│       │   ├── header.blade.php         # Navbar & mobile drawer with brand logo
-│       │   ├── footer.blade.php         # Multi-column footer & copyright
-│       │   └── modal.blade.php          # Bespoke trip planning popup modal
-│       ├── home.blade.php               # Home view
-│       ├── tours.blade.php              # Tours view
-│       ├── stays.blade.php              # Stays view
-│       ├── experiences.blade.php        # Experiences view
-│       └── about.blade.php              # About Us view
-├── routes/
-│   └── web.php                          # Route definitions mapped to TravelController
-├── storage/                             # Logs, framework cache, file storage
-├── .env.example                         # Environment template
-├── .gitignore                           # Git ignore rules for Laravel
-├── artisan                              # Artisan CLI
-└── composer.json                        # Dependencies and autoloading
+## Tech Stack
+
+- **Backend:** Laravel 13, PHP 8.3+
+- **Templates:** Blade
+- **Styling:** Custom CSS (`public/css/style.css`)
+- **Scripts:** Vanilla JavaScript (`public/js/main.js`)
+- **Fonts:** Playfair Display, Plus Jakarta Sans, Cinzel (Google Fonts)
+
+## Requirements
+
+- PHP 8.3 or higher
+- Composer 2
+
+## Installation
+
+```bash
+git clone <repository-url> myceylon-walk
+cd myceylon-walk
+
+composer install
+cp .env.example .env
+php artisan key:generate
+
+php artisan serve
 ```
 
----
+The site will be available at `http://127.0.0.1:8000`.
 
-## 🚀 Getting Started
+On Windows, use `copy .env.example .env` instead of `cp`.
 
-### Prerequisites
+## Project Structure
 
-- **PHP:** `^8.2` or higher (tested on PHP `8.4`)
-- **Composer:** `^2.x`
-- Optional: **Laravel Herd**, **XAMPP**, or native PHP CLI.
+```text
+app/Http/Controllers/
+  TravelController.php     Page views and trip-planning endpoint
+public/
+  css/style.css            Design system and responsive styles
+  js/main.js               Animations, filters, modal and navigation
+  images/                  Logos and WebP photography
+resources/views/
+  layouts/app.blade.php    Base layout
+  partials/                Header, footer and modal
+  home.blade.php
+  tours.blade.php
+  stays.blade.php
+  experiences.blade.php
+  about.blade.php
+routes/web.php             Route definitions
+```
 
-### Installation
+## Design Tokens
 
-1. **Clone or navigate to the project directory:**
-   ```bash
-   cd d:\Chathumina\traval
-   ```
+Colours and other tokens are defined as CSS custom properties in `public/css/style.css`.
 
-2. **Install Composer dependencies:**
-   ```bash
-   composer install
-   ```
+| Token                 | Value     | Usage                    |
+| --------------------- | --------- | ------------------------ |
+| `--primary-gold`      | `#E5A93C` | Accents and buttons      |
+| `--brand-forest-black`| `#061A15` | Dark backgrounds         |
+| `--brand-dark-green`  | `#0A221C` | Dark sections and cards  |
+| `--bg-cream`          | `#FAF7F2` | Page background          |
 
-3. **Configure Environment:**
-   If `.env` does not exist, copy `.env.example`:
-   ```bash
-   copy .env.example .env
-   ```
+## License
 
-4. **Generate Application Key:**
-   ```bash
-   php artisan key:generate
-   ```
-
-5. **Start the Laravel Development Server:**
-   ```bash
-   php artisan serve
-   ```
-   The site will be live at **`http://127.0.0.1:8000`**.
-
----
-
-## 🧭 Routes Summary
-
-| Method | URI | Controller Action | Description |
-|---|---|---|---|
-| `GET` | `/` | `TravelController@index` | Home / Destinations page |
-| `GET` | `/tours` | `TravelController@tours` | Tours & Itineraries |
-| `GET` | `/stays` | `TravelController@stays` | Luxury Stays & Accommodations |
-| `GET` | `/experiences` | `TravelController@experiences` | Authentic Experiences |
-| `GET` | `/about` | `TravelController@about` | About Us & Story |
-| `POST` | `/plan-trip` | `TravelController@planTrip` | Bespoke Trip Booking AJAX API |
-
----
-
-## 🎨 Design Tokens & Typography
-
-- **Colors:**
-  - Gold Accent: `#E5A93C`
-  - Forest Dark: `#061A15` / `#0A221C`
-  - Background Warm Cream: `#FAF7F2`
-  - Light Background: `#FFFFFF`
-- **Typography:**
-  - Display / Monograms: `Cinzel`
-  - Headings & Editorial Serifs: `Playfair Display`
-  - Body & UI Controls: `Plus Jakarta Sans`
-
----
-
-## 💡 Standalone Previews (Zero Dependencies)
-
-If you wish to view the pages without running `php artisan serve` or a PHP server, the `public/` directory contains standalone static HTML copies:
-- `public/index.html`
-- `public/tours.html`
-- `public/stays.html`
-- `public/experiences.html`
-- `public/about.html`
-
----
-
-## 📄 License
-
-This project is proprietary code developed for **My Ceylon Walk**. All rights reserved.
+Proprietary. All rights reserved by My Ceylon Walk.
