@@ -5,7 +5,7 @@
       <div class="footer-brand">
         <a href="{{ url('/') }}" class="brand-logo">
           <div class="brand-logo-wrap">
-            <img src="{{ asset('images/logo.png') }}" alt="My Ceylon Walk" class="brand-logo-img">
+            <img src="{{ asset('images/logo-emblem-gold.png') }}?v={{ filemtime(public_path('images/logo-emblem-gold.png')) }}" alt="My Ceylon Walk" class="brand-logo-img" width="68" height="68">
           </div>
           <div class="brand-logo-text">
             <span class="brand-title">My Ceylon Walk</span>

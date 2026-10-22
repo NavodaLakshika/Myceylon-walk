@@ -5,17 +5,30 @@
 
 @section('content')
 <!-- Stays Hero Section -->
-<section class="hero-section" style="background-image: url('{{ asset('images/Luxury_hotel_infinity_pool_mount_20261002124413.webp') }}');">
+<section class="hero-section" style="border-radius:0;">
+  <img
+    src="{{ asset('images/Luxury_hotel_infinity_pool_mount_20261002124413.webp') }}"
+    alt="Luxury infinity pool hotel in Sri Lanka mountains"
+    class="hero-bg-img"
+    fetchpriority="high"
+    decoding="async"
+  >
+  <div class="hero-vignette"></div>
+  <div class="hero-grain"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-sheen"></div>
   <div class="hero-overlay"></div>
   <div class="container hero-content">
-    <div class="hero-eyebrow-line reveal-text"></div>
-    <h1 class="hero-title reveal-text delay-100">
-      Stay somewhere<br>
-      <span class="highlight-gold">memorable.</span>
-    </h1>
-    <p class="hero-subheading reveal-text delay-200">
-      From misty hill retreats to beachfront villas, find the perfect place to unwind in Sri Lanka.
-    </p>
+    <div class="hero-text-wrap">
+      <div class="hero-eyebrow-line reveal-text"></div>
+      <h1 class="hero-title reveal-text delay-100">
+        Stay somewhere<br>
+        <span class="highlight-gold">memorable.</span>
+      </h1>
+      <p class="hero-subheading reveal-text delay-200">
+        From misty hill retreats to beachfront villas, find the perfect place to unwind in Sri Lanka.
+      </p>
+    </div>
 
     <!-- Stays Search Bar -->
     <div class="hero-search-wrapper reveal-text delay-300">
@@ -115,7 +128,7 @@
               </svg>
               Boutique Hotel
             </span>
-            <div class="btn-card-arrow" style="color: var(--text-dark); border-color: var(--border-light);">
+            <div class="btn-card-arrow">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                 <line x1="5" y1="12" x2="19" y2="12"></line>
                 <polyline points="12 5 19 12 12 19"></polyline>
@@ -155,7 +168,7 @@
               </svg>
               Luxury Eco Lodge
             </span>
-            <div class="btn-card-arrow" style="color: var(--text-dark); border-color: var(--border-light);">
+            <div class="btn-card-arrow">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                 <line x1="5" y1="12" x2="19" y2="12"></line>
                 <polyline points="12 5 19 12 12 19"></polyline>
@@ -195,7 +208,7 @@
               </svg>
               Beach Resort
             </span>
-            <div class="btn-card-arrow" style="color: var(--text-dark); border-color: var(--border-light);">
+            <div class="btn-card-arrow">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                 <line x1="5" y1="12" x2="19" y2="12"></line>
                 <polyline points="12 5 19 12 12 19"></polyline>

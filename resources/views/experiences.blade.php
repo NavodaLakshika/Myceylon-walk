@@ -5,17 +5,30 @@
 
 @section('content')
 <!-- Experiences Hero Section -->
-<section class="hero-section" style="background-image: url('{{ asset('images/Traveller_sitting_on_rocky_viewp_20261002124400.webp') }}');">
+<section class="hero-section" style="border-radius:0;">
+  <img
+    src="{{ asset('images/Traveller_sitting_on_rocky_viewp_20261002124400.webp') }}"
+    alt="Traveller sitting on rocky viewpoint overlooking Sri Lanka"
+    class="hero-bg-img"
+    fetchpriority="high"
+    decoding="async"
+  >
+  <div class="hero-vignette"></div>
+  <div class="hero-grain"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-sheen"></div>
   <div class="hero-overlay"></div>
   <div class="container hero-content">
-    <div class="hero-eyebrow-line reveal-text"></div>
-    <h1 class="hero-title reveal-text delay-100">
-      Do more than<br>
-      <span class="highlight-gold">pass through.</span>
-    </h1>
-    <p class="hero-subheading reveal-text delay-200">
-      Meaningful experiences that connect you with the real Sri Lanka — its people, nature and culture.
-    </p>
+    <div class="hero-text-wrap">
+      <div class="hero-eyebrow-line reveal-text"></div>
+      <h1 class="hero-title reveal-text delay-100">
+        Do more than<br>
+        <span class="highlight-gold">pass through.</span>
+      </h1>
+      <p class="hero-subheading reveal-text delay-200">
+        Meaningful experiences that connect you with the real Sri Lanka — its people, nature and culture.
+      </p>
+    </div>
 
     <!-- Single Search Bar -->
     <div class="hero-single-search reveal-text delay-300">
@@ -33,7 +46,7 @@
 <!-- Category Icons Strip -->
 <div class="features-strip-light" style="background-color: var(--bg-cream); border-bottom: 1px solid var(--border-light); padding: 40px 0;">
   <div class="container">
-    <div style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 20px; text-align: center;">
+    <div class="category-strip-grid">
       <!-- Cat 1 -->
       <div class="features-strip-item reveal-text">
         <div class="features-strip-icon">
@@ -267,9 +280,9 @@
 <!-- Nature Banner: Connect with nature in extraordinary ways -->
 <section class="section section-cream">
   <div class="container">
-    <div class="promo-banner reveal-card" style="background-image: url('{{ asset('images/Waterfall_in_tropical_rainforest_20261002124401.webp') }}'); min-height: 440px;">
-      <div class="promo-banner-overlay"></div>
-      <div class="promo-banner-content">
+    <div class="promo-split reveal-card">
+      <div class="promo-split-content">
+        <div class="hero-eyebrow-line"></div>
         <h3 class="promo-banner-title">
           Connect with nature<br>
           in extraordinary ways.
@@ -285,6 +298,9 @@
           </svg>
         </button>
       </div>
+      <div class="promo-split-media">
+        <img src="{{ asset('images/Waterfall_in_tropical_rainforest_20261002124401.webp') }}" alt="Waterfall in Sri Lanka rainforest" loading="lazy">
+      </div>
     </div>
   </div>
 </section>
@@ -295,7 +311,7 @@
     <h2 class="section-title reveal-text">Seasonal Highlights</h2>
     <p class="section-subtitle reveal-text delay-100" style="margin-bottom: 36px;">The best experiences for every season.</p>
 
-    <div class="destinations-grid-4">
+    <div class="destinations-grid-4 season-grid">
       <div class="destination-card reveal-card">
         <img src="{{ asset('images/Blue_whale_surfacing_in_ocean_20261002124420.webp') }}" alt="Whale Watching" class="destination-card-img" loading="lazy">
         <div class="destination-card-overlay" style="flex-direction: column; align-items: flex-start; justify-content: flex-end;">

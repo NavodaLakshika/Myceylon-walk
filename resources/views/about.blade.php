@@ -5,22 +5,35 @@
 
 @section('content')
 <!-- About Hero Section -->
-<section class="hero-section" style="background-image: url('{{ asset('images/Travellers_walking_through_tea_p_20261002124415.webp') }}');">
+<section class="hero-section" style="border-radius:0;">
+  <img
+    src="{{ asset('images/Travellers_walking_through_tea_p_20261002124415.webp') }}"
+    alt="Travellers walking through lush Sri Lanka tea plantation"
+    class="hero-bg-img"
+    fetchpriority="high"
+    decoding="async"
+  >
+  <div class="hero-vignette"></div>
+  <div class="hero-grain"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-sheen"></div>
   <div class="hero-overlay"></div>
   <div class="container hero-content">
-    <div class="hero-eyebrow-line reveal-text"></div>
-    <h1 class="hero-title reveal-text delay-100">
-      Our story<br>
-      <span class="highlight-gold">is rooted in Sri Lanka.</span>
-    </h1>
-    <p class="hero-subheading reveal-text delay-200">
-      My Ceylon Walk was born from a love for this island, and a desire to share its authentic beauty with the world.
-    </p>
+    <div class="hero-text-wrap">
+      <div class="hero-eyebrow-line reveal-text"></div>
+      <h1 class="hero-title reveal-text delay-100">
+        Our story<br>
+        <span class="highlight-gold">is rooted in Sri Lanka.</span>
+      </h1>
+      <p class="hero-subheading reveal-text delay-200">
+        My Ceylon Walk was born from a love for this island, and a desire to share its authentic beauty with the world.
+      </p>
+    </div>
   </div>
 </section>
 
 <!-- A Local Team Section -->
-<section class="section section-white">
+<section class="section section-cream">
   <div class="container">
     <div class="split-story-grid">
       <div class="split-story-content">
@@ -43,7 +56,7 @@
 </section>
 
 <!-- 4 Value Pillars -->
-<div class="features-strip-light" style="background-color: var(--bg-cream); border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light); padding: 50px 0;">
+<div class="features-strip-light" style="background-color: var(--bg-cream); padding: 10px 0 60px;">
   <div class="container">
     <div class="features-strip-grid">
       <div class="features-strip-item reveal-text">
@@ -88,7 +101,7 @@
 </div>
 
 <!-- How We Plan Your Journey Stepper -->
-<section class="section section-white">
+<section class="section section-cream" style="padding-top: 30px;">
   <div class="container">
     <div style="text-align: center; max-width: 600px; margin: 0 auto 50px;">
       <h2 class="section-title reveal-text">How We Plan Your Journey</h2>
@@ -119,32 +132,30 @@
 </section>
 
 <!-- Impact Banner: Travel that gives back -->
-<section class="section section-cream" style="padding-top: 0;">
-  <div class="container">
-    <div class="promo-banner reveal-card" style="background-image: url('{{ asset('images/Sri_Lankan_Buddhist_temple_complex_20261002124419.webp') }}'); min-height: 440px;">
-      <div class="promo-banner-overlay"></div>
-      <div class="promo-banner-content">
-        <div class="hero-eyebrow-line"></div>
-        <h3 class="promo-banner-title">
-          Travel that gives back.
-        </h3>
-        <p class="promo-banner-desc">
-          We work with local communities, support sustainable tourism and help preserve Sri Lanka's natural and cultural heritage for future generations.
-        </p>
-        <button type="button" class="btn-primary btn-plan-trip">
-          Our Commitment
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <line x1="5" y1="12" x2="19" y2="12"></line>
-            <polyline points="12 5 19 12 12 19"></polyline>
-          </svg>
-        </button>
-      </div>
+<section class="banner-full" style="background-image: url('{{ asset('images/Train_crossing_Nine_Arches_Bridge_20261002124349_2.webp') }}');">
+  <div class="promo-banner-overlay"></div>
+  <div class="container banner-full-inner">
+    <div class="promo-banner-content reveal-text">
+      <div class="hero-eyebrow-line"></div>
+      <h3 class="promo-banner-title">
+        Travel that gives back.
+      </h3>
+      <p class="promo-banner-desc">
+        We work with local communities, support sustainable tourism and help preserve Sri Lanka's natural and cultural heritage for future generations.
+      </p>
+      <button type="button" class="btn-primary btn-plan-trip">
+        Our Commitment
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </button>
     </div>
   </div>
 </section>
 
 <!-- Traveller Stories Section -->
-<section class="section section-cream" style="padding-top: 0;">
+<section class="section section-cream">
   <div class="container">
     <div class="section-header-flex">
       <div>

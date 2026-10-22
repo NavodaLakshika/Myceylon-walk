@@ -2,7 +2,7 @@
   <div class="container nav-container">
     <a href="{{ url('/') }}" class="brand-logo" aria-label="My Ceylon Walk Home">
       <div class="brand-logo-wrap">
-        <img src="{{ asset('images/logo.png') }}" alt="My Ceylon Walk" class="brand-logo-img">
+        <img src="{{ asset('images/logo-emblem-gold.png') }}?v={{ filemtime(public_path('images/logo-emblem-gold.png')) }}" alt="My Ceylon Walk" class="brand-logo-img" width="68" height="68">
       </div>
       <div class="brand-logo-text">
         <span class="brand-title">My Ceylon Walk</span>
@@ -37,7 +37,7 @@
 <div class="mobile-nav-drawer" id="mobileDrawer">
   <a href="{{ url('/') }}" class="brand-logo" style="margin-bottom: 20px;">
     <div class="brand-logo-wrap">
-      <img src="{{ asset('images/logo.png') }}" alt="My Ceylon Walk" class="brand-logo-img">
+      <img src="{{ asset('images/logo-emblem-gold.png') }}?v={{ filemtime(public_path('images/logo-emblem-gold.png')) }}" alt="My Ceylon Walk" class="brand-logo-img" width="68" height="68">
     </div>
     <div class="brand-logo-text">
       <span class="brand-title">My Ceylon Walk</span>

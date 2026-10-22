@@ -1,7 +1,7 @@
 <!-- Plan My Trip / Custom Tour Modal -->
 <div class="modal-overlay" id="planTripModal" role="dialog" aria-modal="true" aria-labelledby="modalHeading">
   <div class="modal-card">
-    <button type="button" class="modal-close-btn" id="modalCloseBtn" aria-label="Close dialog">&times;</button>
+    <!-- <button type="button" class="modal-close-btn" id="modalCloseBtn" aria-label="Close dialog">&times;</button> -->
     <h3 class="modal-title" id="modalHeading">Plan Your Sri Lanka Journey</h3>
     <p class="modal-subtitle">Tell us your dream holiday ideas and our local travel specialists will craft a bespoke itinerary.</p>
 

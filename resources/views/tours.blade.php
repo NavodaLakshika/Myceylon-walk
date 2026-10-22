@@ -5,17 +5,30 @@
 
 @section('content')
 <!-- Tours Hero Section -->
-<section class="hero-section" style="background-image: url('{{ asset('images/Train_crossing_Nine_Arches_Bridge_20261002124349_2.webp') }}');">
+<section class="hero-section" style="border-radius:0;">
+  <img
+    src="{{ asset('images/Train_crossing_Nine_Arches_Bridge_20261002124349_2.webp') }}"
+    alt="Train crossing Nine Arches Bridge in Sri Lanka highlands"
+    class="hero-bg-img"
+    fetchpriority="high"
+    decoding="async"
+  >
+  <div class="hero-vignette"></div>
+  <div class="hero-grain"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-sheen"></div>
   <div class="hero-overlay"></div>
   <div class="container hero-content">
-    <div class="hero-eyebrow-line reveal-text"></div>
-    <h1 class="hero-title reveal-text delay-100">
-      Journeys<br>
-      <span class="highlight-gold">shaped around you.</span>
-    </h1>
-    <p class="hero-subheading reveal-text delay-200">
-      Carefully curated tour packages with local expertise, flexible options and unforgettable experiences.
-    </p>
+    <div class="hero-text-wrap">
+      <div class="hero-eyebrow-line reveal-text"></div>
+      <h1 class="hero-title reveal-text delay-100">
+        Journeys<br>
+        <span class="highlight-gold">shaped around you.</span>
+      </h1>
+      <p class="hero-subheading reveal-text delay-200">
+        Carefully curated tour packages with local expertise, flexible options and unforgettable experiences.
+      </p>
+    </div>
 
     <!-- Tour Search Bar -->
     <div class="tours-search-bar reveal-text delay-300">

@@ -166,14 +166,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 7. Video Modal for "Watch Video" Button
-  const videoBtns = document.querySelectorAll('.btn-video');
-  videoBtns.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      alert('Playing: "Sri Lanka - A Journey Through the Wonder of Asia" (Video Showcase).');
-    });
-  });
+  // // 7. Video Modal for "Watch Video" Button
+  // const videoBtns = document.querySelectorAll('.btn-video');
+  // videoBtns.forEach(btn => {
+  //   btn.addEventListener('click', (e) => {
+  //     e.preventDefault();
+  //     alert('Playing: "Sri Lanka - A Journey Through the Wonder of Asia" (Video Showcase).');
+  //   });
+  // });
 
   // 8. Dynamic Active Navigation Highlighting
   const currentPath = window.location.pathname;

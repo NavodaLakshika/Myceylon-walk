@@ -5,86 +5,103 @@
 
 @section('content')
   <!-- Hero Section -->
-  <section class="hero-section"
-    style="background-image: url('{{ asset('images/Sigiriya_Rock_Fortress_at_sunrise_20261002124419.webp') }}');">
+  <section class="hero-section" style="border-radius:0;">
+    {{-- High-quality hero image — no background-image, use <img> for sharpest rendering --}}
+    <img
+      src="{{ asset('images/hero-sigiriya-hd.webp') }}"
+      srcset="{{ asset('images/hero-sigiriya-1376.webp') }} 1376w,
+              {{ asset('images/hero-sigiriya-1920.webp') }} 1920w,
+              {{ asset('images/hero-sigiriya-hd.webp') }} 2400w"
+      sizes="100vw"
+      alt="Sigiriya Rock Fortress at golden hour"
+      class="hero-bg-img"
+      fetchpriority="high"
+      decoding="async"
+    >
+    {{-- Layered atmospheric effects --}}
+    <div class="hero-vignette"></div>
+    <div class="hero-grain"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-sheen"></div>
     <div class="hero-overlay"></div>
     <div class="container hero-content">
-      <div class="hero-eyebrow-line reveal-text"></div>
-      <h1 class="hero-title reveal-text delay-100">
-        Find the Sri Lanka<br>
-        <span class="highlight-gold">you thought only existed in stories.</span>
-      </h1>
-      <p class="hero-subheading reveal-text delay-200">
-        Ancient wonders, wild safaris, golden beaches and meaningful local experiences — all in one place.
-      </p>
-      <div class="hero-btn-group reveal-text delay-300">
-        <a href="{{ url('/tours') }}" class="btn-primary">
-          Explore Journeys
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
-            stroke-linecap="round" stroke-linejoin="round">
-            <line x1="5" y1="12" x2="19" y2="12"></line>
-            <polyline points="12 5 19 12 12 19"></polyline>
-          </svg>
-        </a>
-        <button type="button" class="btn-video">
-          <span class="play-circle">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-              <polygon points="5 3 19 12 5 21 5 3"></polygon>
+      <div class="hero-text-wrap">
+        <div class="hero-eyebrow-line reveal-text"></div>
+        <h1 class="hero-title reveal-text delay-100">
+          Find the Sri Lanka<br>
+          <span class="highlight-gold">you thought only</span><br>
+          existed in stories.
+        </h1>
+        <p class="hero-subheading reveal-text delay-200">
+          Ancient wonders, wild safaris, golden beaches and meaningful local experiences — all in one place.
+        </p>
+        <div class="hero-btn-group reveal-text delay-300">
+          <a href="{{ url('/tours') }}" class="btn-primary">
+            Explore Journeys
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
             </svg>
-          </span>
-          Watch Video
-        </button>
+          </a>
+          <button type="button" class="btn-video">
+            <span class="play-circle">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+              </svg>
+            </span>
+            Watch Video
+          </button>
+        </div>
+      </div>
+
+      <!-- Trust Metrics (inside hero) -->
+      <div class="hero-trust">
+        <div class="trust-grid">
+          <div class="trust-item reveal-text">
+            <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+            </svg>
+            <div>
+              <div class="trust-text-val">100+</div>
+              <div class="trust-text-sub">Experiences</div>
+            </div>
+          </div>
+          <div class="trust-item reveal-text delay-100">
+            <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <circle cx="12" cy="12" r="10" />
+              <polyline points="12 6 12 12 16 14" />
+            </svg>
+            <div>
+              <div class="trust-text-val">24/7</div>
+              <div class="trust-text-sub">Local Support</div>
+            </div>
+          </div>
+          <div class="trust-item reveal-text delay-200">
+            <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            </svg>
+            <div>
+              <div class="trust-text-val">Trusted</div>
+              <div class="trust-text-sub">by Travelers</div>
+            </div>
+          </div>
+          <div class="trust-item reveal-text delay-300">
+            <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path
+                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+            </svg>
+            <div>
+              <div class="trust-text-val">Sustainable</div>
+              <div class="trust-text-sub">Tourism</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Trust Metrics Bar -->
-  <section class="trust-strip">
-    <div class="container">
-      <div class="trust-grid">
-        <div class="trust-item reveal-text">
-          <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-          </svg>
-          <div>
-            <div class="trust-text-val">100+</div>
-            <div class="trust-text-sub">Experiences</div>
-          </div>
-        </div>
-        <div class="trust-item reveal-text delay-100">
-          <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-            <circle cx="12" cy="12" r="10" />
-            <polyline points="12 6 12 12 16 14" />
-          </svg>
-          <div>
-            <div class="trust-text-val">24/7</div>
-            <div class="trust-text-sub">Local Support</div>
-          </div>
-        </div>
-        <div class="trust-item reveal-text delay-200">
-          <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-          </svg>
-          <div>
-            <div class="trust-text-val">Trusted</div>
-            <div class="trust-text-sub">by Travelers</div>
-          </div>
-        </div>
-        <div class="trust-item reveal-text delay-300">
-          <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-            <path
-              d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
-          </svg>
-          <div>
-            <div class="trust-text-val">Sustainable</div>
-            <div class="trust-text-sub">Tourism</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Featured Journeys Sectio -->
+  <!-- Featured Journeys Section -->
   <section class="section section-cream">
     <div class="container">
       <div class="section-header-flex">
@@ -308,27 +325,25 @@
   </section>
 
   <!-- Call to Action Banner -->
-  <section class="section section-cream" style="padding-top: 0;">
-    <div class="container">
-      <div class="cta-destination-banner reveal-card"
-        style="background-image: url('{{ asset('images/Sri_Lanka_tropical_beach_sunset_20261002124349.webp') }}');">
-        <div class="cta-destination-banner-overlay"></div>
-        <div class="cta-destination-content">
-          <h2 class="cta-destination-title">
-            Let's turn<br>
-            <span>someday into now</span>
-          </h2>
-          <p class="cta-destination-desc">
-            Tell us a little about your travel plans and we'll create a personalised journey for you.
-          </p>
-          <button type="button" class="btn-primary btn-plan-trip">
-            Plan My Trip
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <line x1="5" y1="12" x2="19" y2="12"></line>
-              <polyline points="12 5 19 12 12 19"></polyline>
-            </svg>
-          </button>
-        </div>
+  <section class="banner-full banner-full--right"
+    style="background-image: url('{{ asset('images/Sri_Lanka_tropical_beach_sunset_20261002124349.webp') }}');">
+    <div class="cta-destination-banner-overlay"></div>
+    <div class="container banner-full-inner">
+      <div class="cta-destination-content reveal-text">
+        <h2 class="cta-destination-title">
+          Let's turn<br>
+          <span>someday into now</span>
+        </h2>
+        <p class="cta-destination-desc">
+          Tell us a little about your travel plans and we'll create a personalised journey for you.
+        </p>
+        <button type="button" class="btn-primary btn-plan-trip">
+          Plan My Trip
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </button>
       </div>
     </div>
   </section>
